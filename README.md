@@ -57,7 +57,7 @@ https://www.youtube.com/watch?v=6q98thyEX4Q&list=PLonJJ3BVjZW6_q8gh7XoLUIhRIyBcY
 https://www.youtube.com/watch?v=7GwptabrYyk
 
 ===============================================
- The useful links I was using in Lecture 3:
+ The useful links
  
  https://api.github.com/search/users?q=shashi
  
