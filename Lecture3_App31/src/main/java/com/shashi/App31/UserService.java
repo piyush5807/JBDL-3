@@ -1,7 +1,9 @@
 package com.shashi.App31;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserService {
     HashMap<Integer,User> dataStore;
@@ -22,7 +24,14 @@ public class UserService {
         return user;
     }
     public List<User> findAll(){
-        return (List<User>) dataStore.values();
+        ArrayList<User> list = new ArrayList<>();
+        // using for-each loop for iteration over Map.entrySet()
+        for (Map.Entry<Integer,User> entry : dataStore.entrySet()) {
+
+            list.add(entry.getValue());
+        }
+        return list;
+
     }
 
 }
