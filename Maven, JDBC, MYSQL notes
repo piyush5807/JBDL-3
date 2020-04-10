@@ -1,0 +1,57 @@
+These notes are not for entertainment purpose, I tried to made it an interactive one, please go through each phase one by one and go through the artciles i have shared the links of
+
+**** MySQL Workbench ******
+
+-> Try to get familiarize with GUI (console), explore server logs, startup server logs, client connections, query console, try diff new things, it will help you understand things in a better way
+
+-> Try to write diff sql queries, try to modify the port of database server, see what happens if you change the port ? will it affect the operations ? try to play around with diff user priviledges. try to start and stop the server see the phases that i showed you from startpending to running, from stoppending to stopped etc. 
+you can find the vast documentation here -> https://dev.mysql.com/doc/workbench/en/ (Official website)
+
+-> Can we run mysql queries anywhere else also other than mysql workbench ? Ofcourse you can workbecnh is just a GUI you can wrute queries on terminal too
+
+******* Maven *************
+
+-> Now here comes the topic which i like the most, so maven is not a programming language or construct, it is simply a build tool just like gradle used to build your applications, dont confuse it with anything else
+
+-> Ok now the question is can we build without usinf maven, ofcourse you can, maven just simplifies things like i am doing by writing these funny notes :p. But the thing is you have manually downloads the jars yourself and put them in the lib folder. Not sure what i just said, google it, you will understand
+
+-> now some serious stuffs, do read about the build lifecycle of maven, its super interesting and also about that 3 types of repositories I told you (local, central, remote), also remember the default location of local repo (it's /.m2/) all the jars are present there if we have done mvn install, remember downloading from central repo is a network call
+
+-> One more thing here can we change the default location of /.m2 ? don't look at the answer I don't know you should also search and find something yourself, it will benefit you. First try out yourself, if you dont find then checkout this -> https://howtodoinjava.com/maven/change-local-repository-location/
+
+-> Pls understand the diff b/w mvn install and mvn package -> https://stackoverflow.com/questions/16602017/how-are-mvn-clean-package-and-mvn-clean-install-different
+
+-> Also deploy phase is a nice one to explore -> https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html, https://www.baeldung.com/maven-goals-phases
+
+-> how to add a remote repository url in your pom.xml -> https://maven.apache.org/guides/introduction/introduction-to-repositories.html (but first do read about what is remote repository)
+
+
+******JDBC********
+
+-> First thing JDBC is a protocol not a language or library, library that you need is java.sql which comes prebundled when you imported the mysql-connector-driver dependency
+
+-> While getting the connection make sure you write the full connection string with this syntax 	
+	<protocal>  <database_type like oracle/mysql/postgress> <url of the database server> <port> <Database name>
+, otherwise you will face connection issues
+
+-> Difference b/w prepared statement and normal statement -> https://stackoverflow.com/questions/3271249/difference-between-statement-and-preparedstatement
+, you should use prepared statement wherever possible it is faster as it is precompiled one, remember the two phases which i told while parsing sql queries ? compile and execute
+
+-> Singleton pattern is always recommended when you are getting the connection of DB or any important task related to server connections like it is done in this post
+	https://www.geeksforgeeks.org/singleton-design-pattern/
+, all organization incorporates this. Advantages -> no performance hampering by making threads wait if declared synchronized otherwise, single object creation reducing the no. of client connections of Database
+why it is said client connections, have you ever thought ? (Ok let me tell you, client connection is called bcoz your java application is acting as a client to db server so that's why cleint connections)
+
+-> So we have covered JDBC in detail but that is not what we need to do, are you crazy who writes this much code ? so in the next class let's be a cool dude and try something easy (well its easy to write but maybe difficult to understand so better be prepared for next week, don't be afraid i am sharing some useful articles, go through as much as you can)
+
+
+For next week, you can read these stuffs -> 
+https://dzone.com/articles/introduction-to-jpa-architecture (hehe this includes POJO as well that i told you today (yes today not yesterday i was creating this after the class only :p))
+https://dzone.com/articles/what-is-the-difference-between-hibernate-and-sprin-1
+
+
+
+See ya, next time.
+Any feedbacks are most welcomed through any medium
+piyush5807@gmail.com
++918010391475
