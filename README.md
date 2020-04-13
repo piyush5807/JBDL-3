@@ -97,3 +97,29 @@ Try hitting other APIs with Postman/Browser/Spring code e.g. https://any-api.com
 Some other useful videos:
  https://www.youtube.com/watch?v=gq4S-ovWVlM
  https://www.youtube.com/watch?v=bNFoN956P2A
+ 
+ ===============================
+ 
+Next weekend, we will discuss following things:
+---------------------------------------
+- minor project 1
+- Spring actuator
+- Loggers
+- will start Spring Security
+-----------------------------------------------------
+ Tasks/ Assignments need to be done by next (4th) weekend:
+ -----------------------------------------------------
+- Run all the Apps we discussed in the class using JPA, MongoDB, Exception Handling etc.
+- Create minor project 1 (details given below)
+- Read the basics of upcoming topics (Spring actuator, Loggers, Spring Security)
+------------------------------------------------
+ Description for the minor Project 1:
+ -----------------------------------------------
+Create Spring Boot App for a library management system, with (at least) following features
+
+1.  APIs for creating/updating/fetching/deleting users
+2.  APIs for creating/updating/fetching/deleting/searching books
+3.  User can rent a book from library
+using Spring Boot + REST APIs + MySQL + JPA .
+
+
