@@ -4,10 +4,11 @@ It is a functionality provided by spring boot which makes it easier to incorpora
 
 So basically there 2 important terms that you need to be aware of when talking about the security (and infact its true with most of languages you build your projects in, its not only with spring)
 
-1. Authentication : Authentication is basically checking that if the entity making the request is a valid one or not, if its not a valid user/entity the server will throw 401 HTTP status code error, although 					it means unauthorized but don't confuse it with authorization (its totally different from that). There are various types of authentication like :
-					-> user id and password
-					-> token based
-					-> otp or some captcha type
+1. Authentication : Authentication is basically checking that if the entity making the request is a valid one or not, if its not a valid user/entity the server will throw 401 HTTP status code error, although it means unauthorized but don't confuse it with authorization (its totally different from that). There are various types of authentication like :
+
+-> user id and password
+-> token based
+-> otp or some captcha type
 
 
 2. Authorization : Authorization basically means whether the user/entity making request is allowed to do that operation, it is know that its a valid user/entity but still it may not have proper access control
