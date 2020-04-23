@@ -105,7 +105,7 @@ Some useful annotations that you should be aware about
 @Param: It is used to pass named parameters to our queries
 
 Ex - @Query("FROM Person p WHERE p.name = :name")
-	 Person findByName(@Param("name") String name);
+Person findByName(@Param("name") String name);
 
 @Query: Used to provide queries either using JPQL or using native SQL
 
@@ -118,7 +118,7 @@ Ex - @Query("FROM Person p WHERE p.name = :name")
 @OrderBy: Sort your data using @OrderBy annotation.
 
 Ex - >  @OrderBy("id asc")
-		private Set employee_address;
+private Set employee_address;
 
 @JoinColumn: This annotation is used for one-to-one or many-to-one associations when foreign key is held by one of the entities.
 
@@ -137,43 +137,3 @@ Ex - >  @OrderBy("id asc")
 @Document: This annotation marks a class as being a domain object that we want to persist to the database
 
 @Field: we can configure the name of a field we want to use when MongoDB persists the document
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
