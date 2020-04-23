@@ -132,7 +132,7 @@ private Set employee_address;
 
 <-----------------------------------------------------       Mongo related Annotations           --------------------------------------------------------------> 
 
-@Id :  marks a field in a model class as the primary key
+@Id : A field annotated with @Id (org.springframework.data.annotation.Id) will be mapped to the '_id' field in the mongodb database.
 
 @Document: This annotation marks a class as being a domain object that we want to persist to the database
 
