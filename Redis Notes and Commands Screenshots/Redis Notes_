@@ -1,0 +1,47 @@
+Redis Notes:
+
+Ques 1 First of all what redis is ? 
+
+Ans. Redis is an in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams.
+
+
+Ques 2. Why redis is used or you can say what is the use case of redis?
+
+Ans. Redis is mainly used for caching purpose. Talking in simple terms, till now whichever queries you were writing / running are directly going to the DB(Mysql in our case). In our example, our database server is running on localhost only, but in real time scenarios or production environments db server is running on some other ip/host. For example let's take an example
+
+suppose your spring boot app server is running on 10.8.34.0 and port 8080
+and your db server is running on 10.8.20.0 and port 3306 (let's say although it can be any port)
+
+now whenever you write jpa queries or jdbc queries it goes from 10.8.34.0 to 10.8.20.0 and this communication b/w 2 hosts take time bcoz there is a network call involved in that
+now let's say you add a cache in between, means that you install redis on your spring boot aap server which is running on 10.8.34.0
+now you write your spring boot app program or API in such a way that first the queries go onto you cache server(running on same host as the spring boot app, no network call fast results) and if it not present in cache then it will go to db
+
+In the above scenario, although some queries would still be going to db but most of them would be served by redis cache only, so you have saved a lot of network calls.
+
+Now there is an added advantage in installing redis over in memory cache, your spring boot app server in running on diff port and redis server on diff port (by default is 6379, although you can configure that), now let's say your app server stopped for any reason(it could be an exception or any other reason) in that case, your redis server would still be running bcoz its a separate process running on some other port, so in this say you can separated your app with redis (great microservice design). This is the advantage of redis over h2 or any other in memory dataabse or cache (for ex : gauava cache)
+
+Ques 3. How to get started with redis and what are the diff commands and data structures in redis ?
+
+Ans. Its a very big topic in itself and the best way to learn redis is their official documentation : https://redis.io/
+
+Here you will extensive command reference, and also it has a decent looking where you can play along with redis commands without actually installing it
+Also there is a very good free course with redislabs provides for free -> https://university.redislabs.com/courses/course-v1:redislabs+RU102J+2020_03/about
+
+
+Ques 4 How to download redis on windows ?
+Ans. on mac or linux it quite easy to download you can just google it, but on windows its a bit tricky 
+
+This is official place to download redis zip file -> https://github.com/dmajkic/redis/downloads
+After that follow these steps -> https://www.onlinetutorialspoint.com/spring-boot/setup-install-redis-server-on-windows-10.html
+
+
+Ques 5. How to get started with command line ?
+Ans. You first have to start the redis server by typing the command redis-server , now don't close that tab, open another tab in terminal and start the redis client by wrtiting command redis-cli . After that you are good to write commands in client tab
+
+
+Ques 6. Any command examples you can show ?
+Ans., yes sure, see the images on github
+
+
+That's it, if anyone wants to add something, just raise a PR on github , i will review and merge it asap
+Thanks!!! 
