@@ -1,37 +1,31 @@
 package demo.springsecurityjwt;
 
-import demo.springsecurityjwt.models.AuthenticationRequest;
-import demo.springsecurityjwt.models.AuthenticationResponse;
-import demo.springsecurityjwt.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-class HelloWorldController {
+class WebController {
 
     @Autowired
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private JwtUtil jwtTokenUtil;
+    private Utils jwtTokenUtil;
 
     @Autowired
     private MyUserDetailsService userDetailsService;
 
-    @RequestMapping({ "/hello" })
+    @GetMapping(value = "/user" )
     public String firstPage(HttpServletRequest request) {
         System.out.println(request.getHeader("Authorization"));
-        return "Hello World";
+        return "Hello Users";
     }
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)

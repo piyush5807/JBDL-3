@@ -1,4 +1,4 @@
-package demo.springsecurityjwt.models;
+package demo.springsecurityjwt;
 
 import java.io.Serializable;
 

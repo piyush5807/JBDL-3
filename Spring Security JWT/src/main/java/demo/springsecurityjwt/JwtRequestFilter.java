@@ -1,7 +1,5 @@
-package demo.springsecurityjwt.filters;
+package demo.springsecurityjwt;
 
-import demo.springsecurityjwt.util.JwtUtil;
-import demo.springsecurityjwt.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -23,7 +21,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     private MyUserDetailsService userDetailsService;
 
     @Autowired
-    private JwtUtil jwtUtil;
+    private Utils jwtUtil;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)

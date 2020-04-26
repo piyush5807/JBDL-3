@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringSecurityJpaApplication implements CommandLineRunner {
+public class SpringSecurityJpaApplication {
 
 	@Autowired
 	UserServiceRepository userServiceRepository;
@@ -16,11 +16,11 @@ public class SpringSecurityJpaApplication implements CommandLineRunner {
 	}
 
 
-	@Override
-	public void run(String... args) throws Exception {
-		userServiceRepository.save(new MyUserDetails("piyush", "pass", true,
-				"USER:ADMIN"));
-		userServiceRepository.save(new MyUserDetails("abc", "1234", true,
-				"USER"));
-	}
+//	@Override
+//	public void run(String... args) throws Exception {
+//		userServiceRepository.save(new MyUserDetails("piyush", "pass", true,
+//				"USER:ADMIN"));
+//		userServiceRepository.save(new MyUserDetails("abc", "1234", true,
+//				"USER"));
+//	}
 }

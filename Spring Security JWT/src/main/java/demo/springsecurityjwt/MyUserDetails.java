@@ -1,8 +1,7 @@
-package com.example.jpaspringsecurity.springsecurityjpa;
+package demo.springsecurityjwt;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.Entity;
@@ -89,8 +88,5 @@ public class MyUserDetails implements UserDetails {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return this.userName + " , " + this.password;
-    }
+
 }

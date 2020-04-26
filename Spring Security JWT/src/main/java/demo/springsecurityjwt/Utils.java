@@ -1,4 +1,4 @@
-package demo.springsecurityjwt.util;
+package demo.springsecurityjwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Service
-public class JwtUtil {
+public class Utils {
 
     private String SECRET_KEY = "secret";
 
