@@ -25,11 +25,13 @@ class WebController {
     @GetMapping(value = "/user" )
     public String firstPage(HttpServletRequest request) {
         System.out.println(request.getHeader("Authorization"));
+        System.out.println(request.getCookies());
+        System.out.println(request.getAuthType());
         return "Hello Users";
     }
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
+    public AuthenticationResponse createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
 
         try {
             authenticationManager.authenticate(
@@ -46,7 +48,7 @@ class WebController {
 
         final String jwt = jwtTokenUtil.generateToken(userDetails);
 
-        return ResponseEntity.ok(new AuthenticationResponse(jwt));
+        return new AuthenticationResponse(jwt);
     }
 
 }
