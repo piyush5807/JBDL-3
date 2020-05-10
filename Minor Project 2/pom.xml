@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.adamzareba</groupId>
-    <artifactId>company-structure-spring-security-oauth2-authorities</artifactId>
+    <groupId>com.piyush</groupId>
+    <artifactId>oauth2.project</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <parent>
