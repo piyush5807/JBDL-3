@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringSecurityJpaApplication {
 
-	@Autowired
-	UserServiceRepository userServiceRepository;
+//	@Autowired
+//	UserServiceRepository userServiceRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringSecurityJpaApplication.class, args);

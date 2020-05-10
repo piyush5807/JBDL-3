@@ -14,7 +14,7 @@ import java.util.function.Function;
 @Service
 public class Utils {
 
-    private String SECRET_KEY = "secret";
+    private String SECRET_KEY = "my_dev_profile_";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);

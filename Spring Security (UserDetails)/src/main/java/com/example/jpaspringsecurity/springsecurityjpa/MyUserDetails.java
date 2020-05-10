@@ -28,11 +28,11 @@ public class MyUserDetails implements UserDetails {
 
     String authorities;
 
-    public MyUserDetails(String userName, String password, boolean isEnabled, String authorities){
+    public MyUserDetails(String userName, String password){
         this.userName = userName;
         this.password = password;
-        this.isEnabled = isEnabled;
-        this.authorities = authorities;
+        this.isEnabled = true;
+        this.authorities = "USER";
     }
 
     public MyUserDetails(){
