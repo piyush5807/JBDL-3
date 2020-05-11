@@ -1,5 +1,8 @@
 # JBDL-3
 
+Minor Project Read Me : https://docs.google.com/presentation/d/1Vif4DYJbgNCpLLD9KKt-1tLdRCpsupLPtHfrwT5hcRk/edit?usp=sharing
+
+if anyone wants to access this slide, plz email me your id, i will grant access. Email id : piyush5807@gmail.com 
 
 ======================================
 Agenda for the next week (2nd Week):
