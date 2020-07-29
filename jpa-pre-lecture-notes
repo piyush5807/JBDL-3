@@ -1,4 +1,4 @@
-This is just to give all of you a sneak peek as to what will be covered in Sat's class and what is jpa and hibernate all about
+This is just to give all of you a sneak peek as to what will be covered in Sunday's class and what is jpa and hibernate all about
 
 So basically JPA (Java Persistence API) is an API or you can say a contract or specification and not a frameowrk which allows data management (management of data in your persistent database) through your java application. Now simplifying this statement, JPA is just a way to manager your DB data through your java application.
 
